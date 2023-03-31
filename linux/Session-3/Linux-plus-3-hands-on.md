@@ -21,9 +21,12 @@ At the end of the this hands-on training, students will be able to;
 - Part 4 - Group Management
 
 ## Part 1 - Basic User Commands
+
 ​
+
 - whoami.
-​
+  ​
+
 ```bash
 whoami
 sudo su
@@ -33,24 +36,33 @@ su ec2-user
 sudo su -
 pwd
 ```
+
 ​
+
 - who.
-​
+  ​
+
 ```bash
 exit
 who
 who # open a new shell and retry who command to see the users who logged in.
 ```
+
 ​
+
 - w.
-​
+  ​
+
 ```bash
 w
 who
 ```
+
 ​
+
 - id.
-​
+  ​
+
 ```bash
 id
 id root
@@ -58,9 +70,12 @@ sudo su
 useradd user1
 id user1
 ```
+
 ​
+
 - su.
-​
+  ​
+
 ```bash
 su ec2-user
 su user1
@@ -70,9 +85,12 @@ exit
 sudo su - user1
 pwd
 ```
+
 ​
+
 - passwd.
-​
+  ​
+
 ```bash
 exit
 sudo su
@@ -83,19 +101,27 @@ passwd
 exit
 su user2
 ```
+
 ​
+
 ## Part 2 - User management
+
 ​
+
 - /etc/passwd.
-​
+  ​
+
 ```bash
 exit
 cat /etc/passwd
 tail -3 /etc/passwd
 ```
+
 ​
+
 - useradd.
-​
+  ​
+
 ```bash
 sudo useradd user3
 cd /home
@@ -115,9 +141,12 @@ sudo useradd -m -c "this guy is developer" user7    # give a descrpition to user
 cat /etc/passwd
 cat /etc/passwd | grep user7
 ```
+
 ​
+
 - userdel.
-​
+  ​
+
 ```bash
 cat /etc/passwd
 sudo userdel user5
@@ -126,9 +155,12 @@ cd /home && ls
 sudo userdel -r user1    # delete user and its home directory with -r option.
 cd /home && ls
 ```
+
 ​
+
 - usermod.
-​
+  ​
+
 ```bash
 cat /etc/passwd
 sudo usermod -c "this guy will be an aws solution architect" user7
@@ -137,24 +169,35 @@ sudo usermod --help
 sudo usermod -l Superuser user2    # change the name of the user2 with -l option.
 cat /etc/passwd
 ```
+
 ​
+
 ## Part 3 - User Passwords
+
 ​
+
 - passwd-etc/shadow-etc/login.defs.
-​
+  ​
+
 ```bash
   sudo su
   useradd user8
-  passwd user8cat log 
+  passwd user8
+  cat log
   cd /etc
   cat shadow
   cat login.defs
 ```
+
 ​
+
 ## Part 4 - Group Management
+
 ​
+
 - groups.
-​
+  ​
+
 ```bash
 groups
 sudo groupadd linux
